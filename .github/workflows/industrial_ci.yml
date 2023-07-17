@@ -22,7 +22,7 @@ jobs:
         ROS_DISTRO: [foxy, humble, iron, rolling]
     runs-on: ubuntu-latest
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+      group: ${{ github.workflow }}-${{ github.ref }}-${{ matrix.ROS_DISTRO }}
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
