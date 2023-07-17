@@ -1,0 +1,28 @@
+# This config uses industrial_ci (https://github.com/ros-industrial/industrial_ci.git).
+# For troubleshooting, see README (https://github.com/ros-industrial/industrial_ci/blob/master/README.rst)
+
+name: CI btlib
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  schedule:
+    # Run every week at 22:00 on Sunday
+    - cron: "0 22 * * 0"
+
+jobs:
+  industrial_ci:
+    name: ROS ${{ matrix.ROS_DISTRO }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # ROS_DISTRO: [foxy, humble, rolling]
+        ROS_DISTRO: [foxy, humble]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: "ros-industrial/industrial_ci@master"
+        env:
+          ROS_DISTRO: ${{ matrix.ROS_DISTRO }}
