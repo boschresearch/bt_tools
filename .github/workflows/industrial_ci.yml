@@ -29,4 +29,4 @@ jobs:
       - uses: "ros-industrial/industrial_ci@master"
         env:
           ROS_DISTRO: ${{ matrix.ROS_DISTRO }}
-          UPSTREAM_WORKSPACE: ${{ matrix.ROS_DISTRO == 'rolling' && 'github:ros-planning/navigation2@main' || '' }}
+          UPSTREAM_WORKSPACE: ${{ matrix.ROS_DISTRO == 'rolling' && 'github:ros-planning/navigation2#main' || '' }}
