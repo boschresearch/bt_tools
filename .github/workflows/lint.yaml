@@ -20,6 +20,9 @@ jobs:
           - rqt_bt_live
         linter: [flake8, pep257, xmllint]
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
     env:
       AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS: 1
     steps:
