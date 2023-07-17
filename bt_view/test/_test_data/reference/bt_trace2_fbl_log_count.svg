@@ -71,7 +71,7 @@
 <!-- 34 -->
 <g id="34" class="node">
 <title>34</title>
-<polygon fill="#aaaaaa" stroke="black" points="836.5,-246 605.5,-246 605.5,-188 836.5,-188 836.5,-246"/>
+<polygon fill="#cccccc" stroke="black" points="836.5,-246 605.5,-246 605.5,-188 836.5,-188 836.5,-246"/>
 <text text-anchor="start" x="613.5" y="-220.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">FollowPathRecoveryFallback</text>
 <text text-anchor="start" x="683.5" y="-206.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">value: None</text>
 </g>
@@ -136,7 +136,7 @@
 <!-- 35 -->
 <g id="35" class="node">
 <title>35</title>
-<polygon fill="#aaaaaa" stroke="black" points="769,-152 589,-152 589,-94 769,-94 769,-152"/>
+<polygon fill="#cccccc" stroke="black" points="769,-152 589,-152 589,-94 769,-94 769,-152"/>
 <text text-anchor="start" x="633.5" y="-126.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">GoalUpdated</text>
 <text text-anchor="start" x="641.5" y="-112.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">value: None</text>
 </g>
@@ -149,7 +149,7 @@
 <!-- 36 -->
 <g id="36" class="node">
 <title>36</title>
-<polygon fill="#aaaaaa" stroke="black" points="1010.5,-152 787.5,-152 787.5,-94 1010.5,-94 1010.5,-152"/>
+<polygon fill="#cccccc" stroke="black" points="1010.5,-152 787.5,-152 787.5,-94 1010.5,-94 1010.5,-152"/>
 <text text-anchor="start" x="795.5" y="-126.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">ClearLocalCostmap&#45;Context</text>
 <text text-anchor="start" x="861.5" y="-112.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">value: None</text>
 </g>
