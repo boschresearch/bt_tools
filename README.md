@@ -1,4 +1,4 @@
-[![Apache-2.0 License](https://img.shields.io/badge/License-Apache_2.0-blue)](./LICENSE) [![Lint btlib](https://github.com/boschresearch/bt_tools/actions/workflows/lint.yaml/badge.svg)](https://github.com/boschresearch/bt_tools/actions/workflows/lint.yaml) [![Test btlib](https://github.com/boschresearch/bt_tools/actions/workflows/industrial_ci.yml/badge.svg)](https://github.com/boschresearch/bt_tools/actions/workflows/industrial_ci.yml)
+[![Apache-2.0 License](https://img.shields.io/badge/License-Apache_2.0-blue)](./LICENSE) [![Lint bt_tools](https://github.com/boschresearch/bt_tools/actions/workflows/lint.yaml/badge.svg)](https://github.com/boschresearch/bt_tools/actions/workflows/lint.yaml) [![Test bt_tools](https://github.com/boschresearch/bt_tools/actions/workflows/industrial_ci.yml/badge.svg)](https://github.com/boschresearch/bt_tools/actions/workflows/industrial_ci.yml)
 
 <img src="bt_tools_common/doc/logo.svg" alt="bt_tools logo" width="200"/>
 
