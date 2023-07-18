@@ -1,7 +1,7 @@
 # This config uses industrial_ci (https://github.com/ros-industrial/industrial_ci.git).
 # For troubleshooting, see README (https://github.com/ros-industrial/industrial_ci/blob/master/README.rst)
 
-name: CI btlib
+name: test
 
 on:
   pull_request:
