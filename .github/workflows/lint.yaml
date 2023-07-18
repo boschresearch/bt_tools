@@ -1,4 +1,4 @@
-name: Lint btlib
+name: lint
 on:
   pull_request:
   push:
