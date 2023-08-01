@@ -10,11 +10,13 @@
   <exec_depend>nav2_msgs</exec_depend>
   <exec_depend>ament_index_python</exec_depend>
   <exec_depend>python_qt_binding</exec_depend>
+  <exec_depend>python3-qt5-bindings-webkit</exec_depend>
   <exec_depend>rqt_gui</exec_depend>
   <exec_depend>rqt_gui_py</exec_depend>
 
   <exec_depend>btlib</exec_depend>
   <exec_depend>bt_view</exec_depend>
+  <exec_depend>bt_live</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

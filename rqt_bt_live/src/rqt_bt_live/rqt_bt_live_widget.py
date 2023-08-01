@@ -12,12 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
+import logging
 
-from ament_index_python.packages import get_package_share_directory
-from python_qt_binding import loadUi
-from python_qt_binding.QtGui import QPixmap
+from python_qt_binding import QT_BINDING_MODULES, QT_BINDING_VERSION
+from python_qt_binding.QtCore import QUrl
+from python_qt_binding.QtWebKitWidgets import QWebView
 from python_qt_binding.QtWidgets import QWidget
+
+logger = logging.getLogger(__name__)
+
+
+class MyQWebView(QWebView):
+
+    def __init__(self, parent):  # pragma no cover
+        super(MyQWebView, self).__init__(parent)
 
 
 class RqtBtLiveWidget(QWidget):
@@ -32,21 +40,16 @@ class RqtBtLiveWidget(QWidget):
         :param serial_number: A serial number to differentiate multiple
                               instances of the same widget.
         """
+        logger.debug(f'{QT_BINDING_VERSION=}')
+        logger.debug(f'{QT_BINDING_MODULES=}')
         super(RqtBtLiveWidget, self).__init__()
-        ui_file = os.path.join(
-            get_package_share_directory('rqt_bt_live'),
-            'resource',
-            'rqt_bt_live.ui')
-        loadUi(ui_file, self)
-        # Checking if widget is loaded correctly from ui file
-        assert self.imageLabel, 'Label must be loaded from ui file'
-        self.setObjectName('rqt_bt_liveUi')
+        logger.debug(f'{self.size()=}')
+
+        self.qwv = MyQWebView(self)
+        self.qwv.setGeometry(0, 0, 1000, 1000)
+        self.qwv.load(QUrl('http://localhost:8000'))
+
         # Show windowTitle on left-top of each plugin.
         if serial_number > 1:
             self.setWindowTitle(
                 self.windowTitle() + (' (%d)' % serial_number))
-
-    def set_image(self, _path):
-        """Set the image of the widget."""
-        image_path = _path + '.png'
-        self.imageLabel.setPixmap(QPixmap(image_path))
