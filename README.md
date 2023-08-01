@@ -6,9 +6,63 @@
 
 Tools to view behavior trees:
 
-- [btlib](btlib/): Library to parse behavior trees.
-- [bt_view](bt_view/): Tools to visualize behavior tree runs.
-- [rqt_bt_live](rqt_bt_live/): Tool to view behavior trees in rqt at runtime.
+## btlib
+
+A Library to parse behavior trees.
+
+### How to generate fbl files
+
+To analyze past runs of a behavior tree, you need to enable the logging to fbl files. This is a feature of the BehaviorTree.CPP library but for example navigation2 does currently not support it.
+You can enable the support like this: <https://github.com/ct2034/navigation2/commit/b019fbc49d72dd34a45128bb20d1114e9b8c2b24>
+
+## bt_live
+
+Look at the behavior tree at runtime
+
+### Usage
+
+The tool currently requires an `fbl` log file, because it contains the tree definition.
+But it will then visualize the tree at runtime based on the messages published unter `/behavior_tree_log`.
+
+```bash
+ros2 run bt_live bt_live --fbl_file <path_to_fbl_log>
+```
+
+Then open a browser at <http://localhost:8000> to see the visualization.
+It should look a little something like this:
+
+<img src="bt_live/doc/bt_live_browser.png" width="600" />
+
+## bt_view
+
+Tools to visualize and analyze past behavior tree runs.
+
+### Visualizing a `fbl` log
+
+```bash
+ros2 run bt_view bt_view --bt_log_fbl_fnames <path_to_fbl_log>
+```
+
+The tool will output images about
+
+- the count of calls with the suffix `_count.png` and
+- the return states with the suffix `_states.png`
+to the same folder that the `fbl` log is in.
+
+For example, the `_states.png` file will look like this:
+
+<img src="bt_view/test/_test_data/reference/bt_trace_other_fbl_log_states.png" width="600" />
+
+
+### Calculate coverage
+
+```bash
+ros2 run bt_view bt_view --bt_log_fbl_fnames <path_to_fbl_log> --coverage-threshold <threshold>
+```
+
+The tool will count the percentage of nodes that have been executed in the giben fbl file(s). Iff above the threshold, it will return 0.
+
+# Contributing
 
 ## Contribution Guidelines
 
