@@ -1,10 +1,15 @@
-[![Apache-2.0 License](https://img.shields.io/badge/License-Apache_2.0-blue)](./LICENSE) [![Lint bt_tools](https://github.com/boschresearch/bt_tools/actions/workflows/lint.yaml/badge.svg)](https://github.com/boschresearch/bt_tools/actions/workflows/lint.yaml) [![Test bt_tools](https://github.com/boschresearch/bt_tools/actions/workflows/industrial_ci.yml/badge.svg)](https://github.com/boschresearch/bt_tools/actions/workflows/industrial_ci.yml)
+# bt_tools
+
+[![github test](https://img.shields.io/github/actions/workflow/status/boschresearch/bt_tools/industrial_ci.yml?label=test&style=flat-square)](https://github.com/boschresearch/bt_tools/actions/workflows/industrial_ci.yml)
+[![github lint](https://img.shields.io/github/actions/workflow/status/boschresearch/bt_tools/lint.yaml?label=lint&style=flat-square)](https://github.com/boschresearch/bt_tools/actions/workflows/lint.yaml)
+[![GitHub issues](https://img.shields.io/github/issues/boschresearch/bt_tools.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/issues)
+[![GitHub prs](https://img.shields.io/github/issues-pr/boschresearch/bt_tools.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/pulls)
+[![python](https://img.shields.io/github/languages/top/boschresearch/bt_tools.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/search?l=python)
+[![License](https://img.shields.io/badge/license-Apache%202-blue.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/blob/main/LICENSE)
 
 <img src="bt_tools_common/doc/logo.svg" alt="bt_tools logo" width="200"/>
 
-# bt_tools
-
-Tools to view behavior trees:
+There are 3 tools to view behavior trees:
 
 ## btlib
 
@@ -25,7 +30,7 @@ The tool currently requires an `fbl` log file, because it contains the tree defi
 But it will then visualize the tree at runtime based on the messages published unter `/behavior_tree_log`.
 
 ```bash
-ros2 run bt_live bt_live --fbl_file <path_to_fbl_log>
+ros2 run bt_live bt_live --ros-args -p fbl_file:=<path_to_fbl_log>
 ```
 
 Then open a browser at <http://localhost:8000> to see the visualization.
@@ -52,7 +57,6 @@ to the same folder that the `fbl` log is in.
 For example, the `_states.png` file will look like this:
 
 <img src="bt_view/test/_test_data/reference/bt_trace_other_fbl_log_states.png" width="600" />
-
 
 ### Calculate coverage
 
