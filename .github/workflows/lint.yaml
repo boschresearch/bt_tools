@@ -16,8 +16,8 @@ jobs:
       matrix:
         package-name:
           - btlib
+          - bt_live
           - bt_view
-          - rqt_bt_live
         linter: [flake8, pep257, xmllint]
     runs-on: ubuntu-latest
     concurrency:

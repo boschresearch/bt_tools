@@ -4,7 +4,7 @@ import os
 import sys
 
 
-def main(verb='runserver'):
+def main(verb='runserver --noreload --nothreading'):
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bt_live.settings')
     try:
@@ -17,10 +17,10 @@ def main(verb='runserver'):
         ) from exc
     print(f'{sys.argv=}')
     if verb:
-        execute_from_command_line([sys.argv[0], verb])
+        execute_from_command_line([sys.argv[0]] + verb.split(' '))
     else:
         execute_from_command_line(sys.argv)
 
 
 if __name__ == '__main__':
-    main('runserver')
+    main()

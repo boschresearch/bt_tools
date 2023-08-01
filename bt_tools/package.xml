@@ -13,7 +13,6 @@
     <exec_depend>bt_live</exec_depend>
     <exec_depend>bt_view</exec_depend>
     <exec_depend>btlib</exec_depend>
-    <exec_depend>rqt_bt_live</exec_depend>
 
     <export>
         <build_type>ament_cmake</build_type>
