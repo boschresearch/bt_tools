@@ -25,7 +25,7 @@ The tool currently requires an `fbl` log file, because it contains the tree defi
 But it will then visualize the tree at runtime based on the messages published unter `/behavior_tree_log`.
 
 ```bash
-ros2 run bt_live bt_live --fbl_file <path_to_fbl_log>
+ros2 run bt_live bt_live --ros-args -p fbl_file:=<path_to_fbl_log>
 ```
 
 Then open a browser at <http://localhost:8000> to see the visualization.
