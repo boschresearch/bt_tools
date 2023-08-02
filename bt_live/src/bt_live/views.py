@@ -6,13 +6,7 @@ from ament_index_python.packages import get_package_share_directory
 
 from bt_live.ros_node import SingletonBtLiveNode
 
-from bt_view.bt_view import draw_pygraphviz_w_history
-
-from btlib.bts import fbl_to_networkx
-
 from django.http import HttpResponse
-
-i = 0
 
 
 def index(request):

@@ -6,15 +6,7 @@ from bt_live.ros_node import SingletonBtLiveNode
 
 from django.http import StreamingHttpResponse
 
-# node = None
 coroutine = None
-
-
-# def get_node():
-#     global node
-#     if node is None:
-        
-#     return node
 
 
 def get_coroutine(coroutine_function, *args, **kwargs):
