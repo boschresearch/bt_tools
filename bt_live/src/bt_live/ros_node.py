@@ -2,17 +2,15 @@ import os
 
 from bt_view.bt_view import COLORS_PER_RETURN_STATE, draw_pygraphviz
 
-from btlib.common import NODE_STATE
 from btlib.bts import fbl_to_networkx
+from btlib.common import NODE_STATE
 
 from nav2_msgs.msg import BehaviorTreeLog, BehaviorTreeStatusChange
 
 from rcl_interfaces.msg import ParameterDescriptor
 
 import rclpy
-
 from rclpy.node import Node
-
 from rclpy.time import Time
 
 
@@ -38,7 +36,6 @@ class SingletonBtLiveNode():
 
     def __call__(self, *args, **kwargs):
         return self._instance(*args, **kwargs)
-
 
 
 class BtLiveNode(Node):
