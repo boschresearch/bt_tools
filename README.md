@@ -7,7 +7,7 @@
 [![python](https://img.shields.io/github/languages/top/boschresearch/bt_tools.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/search?l=python)
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/blob/main/LICENSE)
 
-<img src="bt_tools_common/doc/logo.svg" alt="bt_tools logo" width="200"/>
+<img src="bt_tools_common/doc/logo.png" alt="bt_tools logo" width="200"/>
 
 There are 3 tools to view behavior trees:
 
