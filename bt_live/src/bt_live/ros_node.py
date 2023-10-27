@@ -59,6 +59,9 @@ class BtLiveNode(Node):
             ParameterDescriptor(
                 description='File to read the BT from.'))
         self.fbl_path = self.param_fbl_file.value
+        if not os.path.exists(self.fbl_path):
+            raise FileNotFoundError(
+                f'File {self.fbl_path} does not exist.')
         self.img_path = os.path.join('/tmp', 'bt_trace')
         self.get_logger().info(f'{self.img_path=}')
 
