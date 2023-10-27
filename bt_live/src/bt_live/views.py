@@ -33,6 +33,7 @@ def index(request):
         <!DOCTYPE html>
         <html>
         <head>
+        <title>bt_live</title>
         <!-- favicon -->
         <link rel=icon href=favicon.png sizes=32x32 type=image/png>
         <link rel=icon href=favicon.svg sizes=any type=image/svg+xml>

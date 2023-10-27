@@ -58,11 +58,18 @@ class BtLiveNode(Node):
             '',
             ParameterDescriptor(
                 description='File to read the BT from.'))
-        self.fbl_path = self.param_fbl_file.value
+        self.fbl_file = self.param_fbl_file.value
+        if self.fbl_file == '':
+            raise ValueError('No file specified. Please specify the file to'
+                             'read the BT from under the parameter '
+                             '`fbl_file`.')
+        if not os.path.exists(self.fbl_file):
+            raise FileNotFoundError(
+                f'File under path fbl_file={self.fbl_file} does not exist.')
         self.img_path = os.path.join('/tmp', 'bt_trace')
         self.get_logger().info(f'{self.img_path=}')
 
-        self.g = fbl_to_networkx(self.fbl_path)
+        self.g = fbl_to_networkx(self.fbl_file)
 
         # make first image with gray nodes
         draw_pygraphviz(
