@@ -83,15 +83,20 @@ class BtLiveNode(Node):
         for event in event_log:
             assert isinstance(event, BehaviorTreeStatusChange)
             if _has_uid(event):
-                # self.data[event.node_name] = event.current_status
-                found_state = next(
+                previous_state = next(
+                    (state for state in NODE_STATE
+                     if state.name == event.previous_status),
+                    None,
+                )
+                current_state = next(
                     (state for state in NODE_STATE
                      if state.name == event.current_status),
                     None,
                 )
-                self.data[event.uid] = COLORS_PER_RETURN_STATE[
-                    found_state
-                ]
+                self.data[event.uid] = {
+                    'previous': COLORS_PER_RETURN_STATE[previous_state],
+                    'current': COLORS_PER_RETURN_STATE[current_state],
+                }
 
     def spin_once(self):
         rclpy.spin_once(self)

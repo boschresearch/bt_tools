@@ -1,6 +1,9 @@
 const TIMEOUT = 5000; // ms
 var connected = false;
 var ourTimer = null;
+var nodes = null;
+var history = {};
+var FREQ = 1000000000; // ms
 
 function newtimer(f) {
     clearInterval(ourTimer);
@@ -47,18 +50,20 @@ function connect() {
                 newtimer(disconnect);
 
                 // use only last dict:
-                let new_msg = this.responseText.slice(this.responseText.lastIndexOf("{"));
+                let new_msg = this.responseText.slice(this.responseText.lastIndexOf("{\"t"));
                 console.log(new_msg);
                 data = JSON.parse(new_msg);
 
-                let nodes = $(".node").children("polygon");
                 nodes.each(function (n) {
                     var col = "#eeeeee";
                     if (this.parentElement.id in data) {
-                        col = data[this.parentElement.id];
+                        col = data[this.parentElement.id]['current'];
                     }
                     this.setAttribute("fill", col);
+                    history[this.parentElement.id][0].push(data['timestamp']);
+                    history[this.parentElement.id][1].push(col);
                 });
+                draw();
 
                 const d = new Date();
                 document.getElementById("last_update").innerHTML = 'Last update: ' + d.toLocaleTimeString();
@@ -70,6 +75,29 @@ function connect() {
             disconnect();
         }
     }
+}
+
+function draw() {
+    nodes.each(function (n) {
+        var col = "#eeeeee";
+        this.setAttribute("fill", col);
+        let timestamps = history[this.parentElement.id][0];
+        let colors = history[this.parentElement.id][1];
+        // add bars for history
+        for (var i = timestamps.length - 1; i >= 0; i--) {
+            var ts = timestamps[i];
+            var color = colors[i];
+            var height = this.getHeight();
+
+            var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            rect.setAttribute("x", x);
+            rect.setAttribute("y", y);
+            rect.setAttribute("width", width);
+            rect.setAttribute("height", height);
+            rect.setAttribute("fill", color);
+            this.parentElement.appendChild(rect);
+        }
+    });
 }
 
 $("svg").ready(function () {
@@ -87,4 +115,10 @@ $("svg").ready(function () {
     console.log("done");
     $(".node").children("image").hide();
     var width = getWidth($(".node:first").children("polygon").attr("points"));
+    nodes = $(".node").children("polygon");
+    nodes.each(function (n) {
+        history[this.parentElement.id] = [[], []];
+        // {
+        //    "1": [[121], [122], ['#eeeeee', '#ff9999']]}
+    });
 });
