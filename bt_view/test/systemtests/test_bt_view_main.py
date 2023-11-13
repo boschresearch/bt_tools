@@ -30,8 +30,6 @@ class TestBtViewMain(unittest.TestCase):
         self.no_exts = ['1', '2', '_other']
         # data extensions of the different output files
         self.log_data_exts = ['count', 'states']
-        # data extensions on static behavior trees
-        self.bt_data_exts = ['demo']
         # image extensions of the different output files
         self.img_exts = ['png', 'svg']
 

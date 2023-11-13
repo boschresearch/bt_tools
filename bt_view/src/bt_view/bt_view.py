@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from hashlib import sha256
 from math import log
 import os
 from typing import Dict, List, Optional, Union
@@ -54,6 +55,10 @@ COLORS_PER_RETURN_STATE_VALUE = {
     for rs in NODE_STATE
 }
 COLORS_PER_RETURN_STATE_VALUE[None] = COLORS_PER_RETURN_STATE[None]
+
+
+def my_hash(s: object) -> str:
+    return sha256(str(s).encode()).hexdigest()[:20]
 
 
 def _colormap(cm_name: str, value: Optional[float]) -> str:
@@ -135,7 +140,7 @@ def _make_return_value_bargraph(
         return None
     if not os.path.exists(BG_IMG_FOLDER):
         os.makedirs(BG_IMG_FOLDER)
-    img_hash = hash(tuple(retvalues_counts))
+    img_hash = my_hash(tuple(retvalues_counts))
     img_path = os.path.join(
         BG_IMG_FOLDER,
         f'{img_hash}.png')
@@ -164,7 +169,7 @@ def _make_history_image(
         return None
     if not os.path.exists(BG_IMG_FOLDER):
         os.makedirs(BG_IMG_FOLDER)
-    img_hash = hash(tuple(states))
+    img_hash = my_hash(tuple(states))
     img_path = os.path.join(
         BG_IMG_FOLDER,
         f'h{img_hash}.png')

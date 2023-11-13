@@ -12,7 +12,7 @@
 <g id="25" class="node">
 <title>25</title>
 <polygon fill="none" stroke="black" points="600,-434 351,-434 351,-376 600,-376 600,-434"/>
-<image xlink:href="/tmp/bt_imgs/-9132540644628979584.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="351" y="-434"/>
+<image xlink:href="/tmp/bt_imgs/256db729a34f661adc27.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="351" y="-434"/>
 <text text-anchor="start" x="384.5" y="-415.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">NavigateWithReplanning</text>
 <text text-anchor="start" x="401" y="-401.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">category: NODECAT.ROOT</text>
 <text text-anchor="start" x="380.5" y="-387.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">values: S: 0 F: 0 R: 1 I: 0 </text>
@@ -21,7 +21,7 @@
 <g id="26" class="node">
 <title>26</title>
 <polygon fill="none" stroke="black" points="467,-340 218,-340 218,-282 467,-282 467,-340"/>
-<image xlink:href="/tmp/bt_imgs/2640008322256984846.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="218" y="-340"/>
+<image xlink:href="/tmp/bt_imgs/f832a54cd21dece2ad72.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="218" y="-340"/>
 <text text-anchor="start" x="284.5" y="-314.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">RateController</text>
 <text text-anchor="start" x="241" y="-300.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">values: S: 18 F: 0 R: 19 I: 0 </text>
 </g>
@@ -35,7 +35,7 @@
 <g id="32" class="node">
 <title>32</title>
 <polygon fill="none" stroke="black" points="734,-340 485,-340 485,-282 734,-282 734,-340"/>
-<image xlink:href="/tmp/bt_imgs/-9132540644628979584.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="485" y="-340"/>
+<image xlink:href="/tmp/bt_imgs/256db729a34f661adc27.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="485" y="-340"/>
 <text text-anchor="start" x="568" y="-314.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">FollowPath</text>
 <text text-anchor="start" x="514.5" y="-300.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">values: S: 0 F: 0 R: 1 I: 0 </text>
 </g>
@@ -49,7 +49,7 @@
 <g id="27" class="node">
 <title>27</title>
 <polygon fill="none" stroke="black" points="467,-246 218,-246 218,-188 467,-188 467,-246"/>
-<image xlink:href="/tmp/bt_imgs/2640008322256984846.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="218" y="-246"/>
+<image xlink:href="/tmp/bt_imgs/f832a54cd21dece2ad72.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="218" y="-246"/>
 <text text-anchor="start" x="272" y="-220.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">ComputePathToPose</text>
 <text text-anchor="start" x="241" y="-206.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">values: S: 18 F: 0 R: 19 I: 0 </text>
 </g>
@@ -63,7 +63,7 @@
 <g id="33" class="node">
 <title>33</title>
 <polygon fill="none" stroke="black" points="734,-246 485,-246 485,-188 734,-188 734,-246"/>
-<image xlink:href="/tmp/bt_imgs/-9132540644628979584.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="485" y="-246"/>
+<image xlink:href="/tmp/bt_imgs/256db729a34f661adc27.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="485" y="-246"/>
 <text text-anchor="start" x="568" y="-220.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">FollowPath</text>
 <text text-anchor="start" x="514.5" y="-206.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">values: S: 0 F: 0 R: 1 I: 0 </text>
 </g>
@@ -90,7 +90,7 @@
 <g id="28" class="node">
 <title>28</title>
 <polygon fill="none" stroke="black" points="249,-152 0,-152 0,-94 249,-94 249,-152"/>
-<image xlink:href="/tmp/bt_imgs/7570529939316445571.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="0" y="-152"/>
+<image xlink:href="/tmp/bt_imgs/11e7bfdc73860773cf9c.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="0" y="-152"/>
 <text text-anchor="start" x="54" y="-126.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">ComputePathToPose</text>
 <text text-anchor="start" x="23" y="-112.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">values: S: 19 F: 1 R: 20 I: 0 </text>
 </g>
@@ -104,7 +104,7 @@
 <g id="29" class="node">
 <title>29</title>
 <polygon fill="none" stroke="black" points="556,-152 267,-152 267,-94 556,-94 556,-152"/>
-<image xlink:href="/tmp/bt_imgs/8892784693083842610.png" width="289px" height="58px" preserveAspectRatio="xMinYMin meet" x="267" y="-152"/>
+<image xlink:href="/tmp/bt_imgs/b67d8e6c8f867e70e008.png" width="289px" height="58px" preserveAspectRatio="xMinYMin meet" x="267" y="-152"/>
 <text text-anchor="start" x="275" y="-126.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">ComputePathToPoseRecoveryFallback</text>
 <text text-anchor="start" x="316.5" y="-112.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">values: S: 1 F: 0 R: 0 I: 0 </text>
 </g>
@@ -118,7 +118,7 @@
 <g id="30" class="node">
 <title>30</title>
 <polygon fill="none" stroke="black" points="403,-58 154,-58 154,0 403,0 403,-58"/>
-<image xlink:href="/tmp/bt_imgs/958806883889543991.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="154" y="-58"/>
+<image xlink:href="/tmp/bt_imgs/fc966513317ae3ba70b8.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="154" y="-58"/>
 <text text-anchor="start" x="233" y="-32.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">GoalUpdated</text>
 <text text-anchor="start" x="183.5" y="-18.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">values: S: 0 F: 1 R: 0 I: 0 </text>
 </g>
@@ -132,7 +132,7 @@
 <g id="31" class="node">
 <title>31</title>
 <polygon fill="none" stroke="black" points="670,-58 421,-58 421,0 670,0 670,-58"/>
-<image xlink:href="/tmp/bt_imgs/8892784693083842610.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="421" y="-58"/>
+<image xlink:href="/tmp/bt_imgs/b67d8e6c8f867e70e008.png" width="249px" height="58px" preserveAspectRatio="xMinYMin meet" x="421" y="-58"/>
 <text text-anchor="start" x="438" y="-32.8" font-family="Bitstream Vera Sans Mono" font-weight="bold" font-size="14.00">ClearGlobalCostmap&#45;Context</text>
 <text text-anchor="start" x="450.5" y="-18.8" font-family="Bitstream Vera Sans Mono" baseline-shift="sub" font-size="14.00">values: S: 1 F: 0 R: 0 I: 0 </text>
 </g>
