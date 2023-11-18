@@ -15,6 +15,7 @@
 from hashlib import sha256
 from math import log
 import os
+import tempfile
 from typing import Dict, List, Optional, Union
 
 from btlib import VALUE_MAP
@@ -33,7 +34,7 @@ WIDTH = 1920
 HEIGHT = 1080
 
 BG_IMG_FOLDER = os.path.join(
-    '/tmp',
+    tempfile.gettempdir(),
     'bt_imgs')
 NODE_WIDTH_IN = 2.5
 NODE_HEIGHT_IN = 0.8

@@ -1,4 +1,5 @@
 import os
+import tempfile
 
 from bt_view.bt_view import COLORS_PER_RETURN_STATE, draw_pygraphviz
 
@@ -66,7 +67,7 @@ class BtLiveNode(Node):
         if not os.path.exists(self.fbl_file):
             raise FileNotFoundError(
                 f'File under path fbl_file={self.fbl_file} does not exist.')
-        self.img_path = os.path.join('/tmp', 'bt_trace')
+        self.img_path = os.path.join(tempfile.gettempdir(), 'bt_trace')
         self.get_logger().info(f'{self.img_path=}')
 
         self.g = fbl_to_networkx(self.fbl_file)
