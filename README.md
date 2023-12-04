@@ -78,6 +78,12 @@ Feedback is highly appreciated. Please open issues on new ideas, bugs, etc. here
 
 ## About
 
+### Presentations
+
+- [ROSCon 2023](https://roscon.ros.org/2023/): Supporting Robotic Deliberation: The Deliberation Working Group and Tools for Behavior Trees
+    - [Video](https://vimeo.com/879001877/4978646728)
+    - [Slides](https://roscon.ros.org/talks/Supporting_Robotic_Deliberation_The_Deliberation_Working_Group_and_Tools_for_Behavior_Trees.pdf)
+
 ### Maintainers
 
 - [Christian Henkel](https://github.com/ct2034)
