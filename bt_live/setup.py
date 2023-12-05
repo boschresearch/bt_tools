@@ -9,6 +9,8 @@ setup(
     name=package_name,
     version='1.0.0',
     packages=[package_name, package_name_django],
+    package_data={'': ['*.js']},
+    include_package_data=True,
     package_dir={
         package_name:
             os.path.join(
