@@ -198,7 +198,7 @@ def _make_history_image(
 def draw_pygraphviz(
     g: nx.Graph,
     fname: str,
-    modifier,
+    modifier: Optional[callable] = None,
 ):
     A = nx.nx_agraph.to_agraph(g)  # convert to a graphviz graph
     for node in A.nodes():
