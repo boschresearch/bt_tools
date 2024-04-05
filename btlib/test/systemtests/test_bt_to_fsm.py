@@ -22,7 +22,32 @@ from btlib.bts import xml_to_networkx
 
 class TestBt2FSM(unittest.TestCase):
 
-    def test_bt2fsm(self):
+    def test_inverter(self):
+        """Test that the conversion from a Behavior Tree to a FSM works."""
+        bt, _ = xml_to_networkx(os.path.join(
+            os.path.dirname(__file__), '..', '_test_data',
+            'bt2fsm', 'inverter_bt.xml'))
+        bt2fsm = Bt2FSM(bt)
+        fsm = bt2fsm.convert()
+        # should have 1 node for the condition
+        # and 4 nodes from the ports
+        self.assertEqual(fsm.number_of_nodes(), 1 + 4)
+        # should have 1 edge for the tick port
+        # and 3 per leaf node
+        self.assertEqual(fsm.number_of_edges(), 1 + 3 * 1)
+
+        # check the existence of the edges
+        for port in ['success', 'failure', 'running']:
+            self.assertTrue(fsm.has_edge('TEST_CONDITION1000', port))
+        self.assertTrue(fsm.has_edge('tick', 'TEST_CONDITION1000'))
+
+        # check the labels of the edges
+        self.assertEqual(fsm.edges['TEST_CONDITION1000', 'success']['label'], 'on_failure')
+        self.assertEqual(fsm.edges['TEST_CONDITION1000', 'failure']['label'], 'on_success')
+        self.assertEqual(fsm.edges['TEST_CONDITION1000', 'running']['label'], 'on_running')
+        self.assertEqual(fsm.edges['tick', 'TEST_CONDITION1000']['label'], 'on_tick')
+
+    def test_simple(self):
         """Test that the conversion from a Behavior Tree to a FSM works."""
         bt, _ = xml_to_networkx(os.path.join(
             os.path.dirname(__file__), '..', '_test_data',

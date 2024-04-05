@@ -194,7 +194,7 @@ class Bt2FSM:
             self._wire_children_together(
                 fsm, children, port_names, ct)
         elif node['category'] == NODE_CAT.DECORATOR:
-            assert len(self.bt.successors(node_id)) == 1, \
+            assert len(list(self.bt.successors(node_id))) == 1, \
                 'Decorator must have exactly one child.'
             child = list(self.bt.successors(node_id))[0]
             fsm_subtree = self._convert_subtree(child)
