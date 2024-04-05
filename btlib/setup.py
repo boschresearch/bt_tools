@@ -11,7 +11,9 @@ setup(
         package_name,
         package_name + '.Serialization'],
     package_dir={
-        package_name: os.path.join('src', package_name)
+        package_name: os.path.join('src', package_name),
+        package_name + '.Serialization': os.path.join('src', package_name, 'Serialization'),
+        package_name + '.bt_to_fsm': os.path.join('src', package_name, 'bt_to_fsm'),
     },
     data_files=[
         ('share/ament_index/resource_index/packages',
