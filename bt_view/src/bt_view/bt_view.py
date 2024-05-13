@@ -198,8 +198,35 @@ def _make_history_image(
 def draw_pygraphviz(
     g: nx.Graph,
     fname: str,
-    modifier,
+    modifier
 ):
+    """Draw an svg and png image of graph g to file with fname"""
+    A = convert_nx_graph(g, modifier)
+    draw_pygraphviz_with_extensions(A, fname, ['svg', 'png'])
+
+
+def draw_pygraphviz_svg(
+    g: nx.Graph,
+    fname: str,
+    modifier=None
+):
+    """Draw an svg image of graph g to file with fname"""
+    A = convert_nx_graph(g, modifier)
+    draw_pygraphviz_with_extensions(A, fname, ['svg'])
+
+
+def draw_pygraphviz_with_extensions(A, fname, extensions):
+    """Draw image of A to file with fname and every extension of extensions"""
+    for ext in extensions:
+        A.draw(
+            f'{fname}.{ext}',
+            prog='dot',
+            # ordering of the outedges
+            args='-Gordering=out'
+        )
+
+
+def convert_nx_graph(g: nx.Graph, modifier):
     A = nx.nx_agraph.to_agraph(g)  # convert to a graphviz graph
     for node in A.nodes():
         # for node attributes see https://graphviz.org/docs/nodes/
@@ -214,13 +241,7 @@ def draw_pygraphviz(
     # remove labels from edges
     for edge in A.edges():
         edge.attr['label'] = ''
-    for ext in ['svg', 'png']:
-        A.draw(
-            f'{fname}.{ext}',
-            prog='dot',
-            # ordering of the outedges
-            args='-Gordering=out'
-        )
+    return A
 
 
 def draw_pygraphviz_w_valuemod(

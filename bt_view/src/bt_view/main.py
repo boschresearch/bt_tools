@@ -23,16 +23,20 @@ try:
     from bt_view import draw_pygraphviz_w_history  # type: ignore
     from bt_view import draw_pygraphviz_w_returnstates  # type: ignore
     from bt_view import draw_pygraphviz_w_valuemod  # type: ignore
+    from bt_view import draw_pygraphviz  # type: ignore
+    from bt_live_view import LiveChanges  # type: ignore
 except ImportError:
     from .bt_view import draw_pygraphviz_w_history
     from .bt_view import draw_pygraphviz_w_returnstates
     from .bt_view import draw_pygraphviz_w_valuemod
-from btlib.analysis import get_coverage
-from btlib.bts import fbl_to_networkx
-from btlib.bts import xml_to_networkx
-from btlib.common import NODE_STATE
-from btlib.logs import merge_values
-from btlib.logs import read_log_fbl
+    from .bt_view import draw_pygraphviz
+    from .bt_live_view import LiveChanges
+from btlib.analysis import get_coverage  # type: ignore
+from btlib.bts import fbl_to_networkx  # type: ignore
+from btlib.bts import xml_to_networkx  # type: ignore
+from btlib.common import NODE_STATE  # type: ignore
+from btlib.logs import merge_values  # type: ignore
+from btlib.logs import read_log_fbl  # type: ignore
 
 
 def main(args=sys.argv[1:]):
@@ -65,18 +69,24 @@ def main(args=sys.argv[1:]):
         'coverage is below the threshold. Example: 0.9',
         default=0.0,
         type=float)
+    parser.add_argument(
+        '--live-view',
+        help='Path to an BT XML file that shall be visualized live. '
+        'An SVG is created which is updated on every file change (save).',
+        nargs='*')
 
     arguments = parser.parse_args(args)
     if not any([
             arguments.bt_xml_fname,
             arguments.bt_log_json_fname,
             arguments.bt_log_fbl_fnames,
+            arguments.live_view,
             arguments.demo]):
         print('You must provide at least one file to read')
         parser.print_help()
         sys.exit(1)
 
-    if arguments.bt_xml_fname and arguments.bt_log_fbl_fname:
+    if arguments.bt_xml_fname and arguments.bt_log_fbl_fnames:
         print('When reading FBL log file, XML file is not needed '
               'and will be ignored')
         arguments.bt_xml_fname = None
@@ -109,14 +119,14 @@ def main(args=sys.argv[1:]):
             g = fbl_to_networkx(bt_log_fbl_fname)
             try:
                 if previous_g is not None:
-                    assert str(g.adj) == str(previous_g.adj),\
-                        'Graphs must have the same structure'
-                    f' {g.adj} != {previous_g.adj}'
+                    assert str(g.adj) == str(previous_g.adj), \
+                        'Graphs must have the same structure' \
+                        f' {g.adj} != {previous_g.adj}'
                     for n in g.nodes:
                         assert str(g.nodes()[n]) == str(
-                            previous_g.nodes()[n]),\
-                            'Graphs must have the node attributes'
-                        f' {g.nodes()[n]} != {previous_g.nodes()[n]}'
+                            previous_g.nodes()[n]), \
+                            'Graphs must have the node attributes' \
+                            f' {g.nodes()[n]} != {previous_g.nodes()[n]}'
             except AssertionError as e:
                 print(e)
                 sys.exit(1)
@@ -166,6 +176,11 @@ def main(args=sys.argv[1:]):
         )
         runtime = datetime.datetime.now() - start_time
         print(f'Runtime: {runtime}')
+
+    if arguments.live_view:
+        bt_xml_fname = arguments.live_view[0]
+        lc = LiveChanges()
+        lc.monitor_file(bt_xml_fname)
 
 
 if __name__ == '__main__':
