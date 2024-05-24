@@ -215,6 +215,12 @@ def draw_pygraphviz_svg(
     draw_pygraphviz_with_extensions(A, fname, ['svg'])
 
 
+def get_pygraphviz_svg(g: nx.Graph, modifier=None):
+    """Create a SVG String from graph g"""
+    A = convert_nx_graph(g, modifier)
+    return A.draw(format='svg', prog='dot').decode('utf-8')
+
+
 def draw_pygraphviz_with_extensions(A, fname, extensions):
     """Draw image of A to file with fname and every extension of extensions"""
     for ext in extensions:

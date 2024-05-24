@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SSE Example</title>
+  <script>
+ var source = new EventSource('/events');
+ source.onmessage = function(event) {
+   document.getElementById('content').innerHTML = event.data;
+ };
+  </script>
+</head>
+<body>
+  <div id="content"></div>
+</body>
+</html>

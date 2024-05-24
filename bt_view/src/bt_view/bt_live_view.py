@@ -7,8 +7,12 @@ from watchdog.events import FileSystemEventHandler, FileSystemEvent
 from btlib.bts import xml_to_networkx  # type: ignore
 try:
     from bt_view import draw_pygraphviz_svg  # type: ignore
+    from bt_view import get_pygraphviz_svg  # type: ignore
+    from app import app
 except ImportError:
     from .bt_view import draw_pygraphviz_svg  # type: ignore
+    from .bt_view import get_pygraphviz_svg  # type: ignore
+    from .app import app
 
 
 class FileModifiedHandler(FileSystemEventHandler):
@@ -49,11 +53,8 @@ class LiveChanges():
     def draw_image(self, bt_xml_fname: str):
         """Draw new svg image."""
         g = self.xml_file_to_graph(bt_xml_fname)
-        path_to_svg = os.getcwd()
-        draw_pygraphviz_svg(
-            g,
-            path_to_svg + '/live_visualization'
-        )
+        path_to_svg = os.getcwd() + '/live_visualization'
+        draw_pygraphviz_svg(g, path_to_svg)
 
     def xml_file_to_graph(self, bt_xml_fname: str):
         """Convert xml file to graph"""
@@ -76,8 +77,7 @@ class LiveChanges():
         observer.schedule(event_handler, path, recursive=True)
         observer.start()
         try:
-            while True:
-                time.sleep(1)
+            app.run()
         except KeyboardInterrupt:
             observer.stop()
         observer.join()

@@ -3,3 +3,4 @@ __pycache__/
 .tmp_imgs/
 .vscode/
 build/
+testingliveview/node_modules/
