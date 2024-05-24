@@ -81,3 +81,5 @@ class LiveChanges():
         except KeyboardInterrupt:
             observer.stop()
         observer.join()
+
+        # TODO: delete temp file here?

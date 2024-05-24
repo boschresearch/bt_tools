@@ -23,13 +23,11 @@ try:
     from bt_view import draw_pygraphviz_w_history  # type: ignore
     from bt_view import draw_pygraphviz_w_returnstates  # type: ignore
     from bt_view import draw_pygraphviz_w_valuemod  # type: ignore
-    from bt_view import draw_pygraphviz  # type: ignore
     from bt_live_view import LiveChanges  # type: ignore
 except ImportError:
     from .bt_view import draw_pygraphviz_w_history
     from .bt_view import draw_pygraphviz_w_returnstates
     from .bt_view import draw_pygraphviz_w_valuemod
-    from .bt_view import draw_pygraphviz
     from .bt_live_view import LiveChanges
 from btlib.analysis import get_coverage  # type: ignore
 from btlib.bts import fbl_to_networkx  # type: ignore
