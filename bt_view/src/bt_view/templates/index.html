@@ -3,10 +3,10 @@
 <head>
   <title>SSE Example</title>
   <script>
- var source = new EventSource('/events');
- source.onmessage = function(event) {
+ var source = new EventSource('/stream');
+ source.addEventListener('update', function(event) {
    document.getElementById('content').innerHTML = event.data;
- };
+ });
   </script>
 </head>
 <body>
