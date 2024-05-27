@@ -23,12 +23,12 @@ try:
     from bt_view import draw_pygraphviz_w_history  # type: ignore
     from bt_view import draw_pygraphviz_w_returnstates  # type: ignore
     from bt_view import draw_pygraphviz_w_valuemod  # type: ignore
-    from bt_live_view import LiveChanges  # type: ignore
+    from bt_live_view import MonitorLiveChanges  # type: ignore
 except ImportError:
     from .bt_view import draw_pygraphviz_w_history
     from .bt_view import draw_pygraphviz_w_returnstates
     from .bt_view import draw_pygraphviz_w_valuemod
-    from .bt_live_view import LiveChanges
+    from .bt_live_view import MonitorLiveChanges
 from btlib.analysis import get_coverage  # type: ignore
 from btlib.bts import fbl_to_networkx  # type: ignore
 from btlib.bts import xml_to_networkx  # type: ignore
@@ -177,8 +177,8 @@ def main(args=sys.argv[1:]):
 
     if arguments.live_view:
         bt_xml_fname = arguments.live_view[0]
-        lc = LiveChanges()
-        lc.monitor_file(bt_xml_fname)
+        lc = MonitorLiveChanges(bt_xml_fname)
+        lc.monitor_file()
 
 
 if __name__ == '__main__':
