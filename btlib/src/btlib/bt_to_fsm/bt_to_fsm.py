@@ -170,7 +170,7 @@ class Bt2FSM:
         fsm.graph['NODE_ID'] = node_id
         port_names = self._add_ports(fsm, node_id)
         p_tick, p_succ, p_fail, p_runn = port_names
-        if node['category'] == NODE_CAT.ACTION:
+        if node['category'] == NODE_CAT.LEAF:
             fsm.add_node(node['name'] + str(node_id), **node)
             fsm.add_edge(p_tick, node['name'] + str(node_id), label='on_tick')
             fsm.add_edge(node['name'] + str(node_id),

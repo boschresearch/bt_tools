@@ -59,7 +59,7 @@ def _get_node_category(node: BeautifulSoup) -> NODE_CAT:
         return NODE_CAT.SUBTREE
     elif len(node.find_all()) == 0:
         # leaf node
-        return NODE_CAT.ACTION
+        return NODE_CAT.LEAF
     elif len(node.find_all()) == 1:
         # decorator
         return NODE_CAT.DECORATOR

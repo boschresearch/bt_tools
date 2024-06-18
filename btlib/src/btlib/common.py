@@ -18,7 +18,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 # node categories
-NODE_CAT = Enum('NODECAT', 'ROOT ACTION DECORATOR CONTROL SUBTREE')
+NODE_CAT = Enum('NODECAT', 'ROOT LEAF DECORATOR CONTROL SUBTREE')
 
 # node states
 NODE_STATE = Enum('RETURN_STATE', 'SUCCESS FAILURE RUNNING IDLE')
