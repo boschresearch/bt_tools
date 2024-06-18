@@ -170,14 +170,15 @@ class Bt2FSM:
         fsm.graph['NODE_ID'] = node_id
         port_names = self._add_ports(fsm, node_id)
         p_tick, p_succ, p_fail, p_runn = port_names
+        unique_name = f'{node_id}_{node["NAME"]}'
         if node['category'] == NODE_CAT.LEAF:
-            fsm.add_node(node['name'] + str(node_id), **node)
-            fsm.add_edge(p_tick, node['name'] + str(node_id), label='on_tick')
-            fsm.add_edge(node['name'] + str(node_id),
+            fsm.add_node(unique_name, **node)
+            fsm.add_edge(p_tick, unique_name, label='on_tick')
+            fsm.add_edge(unique_name,
                          p_succ, label='on_success')
-            fsm.add_edge(node['name'] + str(node_id),
+            fsm.add_edge(unique_name,
                          p_fail, label='on_failure')
-            fsm.add_edge(node['name'] + str(node_id),
+            fsm.add_edge(unique_name,
                          p_runn, label='on_running')
         elif node['category'] == NODE_CAT.CONTROL:
             children = []
