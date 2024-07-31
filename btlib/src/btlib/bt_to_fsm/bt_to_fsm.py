@@ -77,7 +77,7 @@ class Bt2FSM:
 
     def _wire_children_together(
             self, fsm: nx.DiGraph, children: list,
-            port_names: Tuple[str, str, str, str],
+            port_names: Tuple[str, ...],
             control_type: CONTROL_TYPE):
         """
         Wire the children of a control node to its ports.
