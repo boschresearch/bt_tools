@@ -62,7 +62,7 @@ class Bt2FSM:
                 fsm.remove_node(node)
         return fsm
 
-    def _add_ports(self, fsm: nx.DiGraph, node_id: int) -> Tuple[str, str, str, str]:
+    def _add_ports(self, fsm: nx.DiGraph, node_id: int) -> Tuple[str, ...]:
         """
         Add ports to the Finite State Machine.
 
@@ -133,7 +133,7 @@ class Bt2FSM:
 
     def _wire_child(
             self, fsm: nx.DiGraph, child: nx.DiGraph,
-            port_names: Tuple[str, str, str, str],
+            port_names: Tuple[str, ...],
             decorator_type: DECORATOR_TYPE):
         """
         Wire the child of a decorator node to its ports.
@@ -214,10 +214,10 @@ class Bt2FSM:
         """Plot the Finite State Machine."""
         import matplotlib.pyplot as plt
         fixed_pos = {
-            'tick': (-2, 0),
-            'success': (2, 1),
-            'failure': (2, 0),
-            'running': (2, -1)
+            'tick': (-2., 0.),
+            'success': (2., 1.),
+            'failure': (2., 0.),
+            'running': (2., -1.)
         }
         initial_pos = {}
         initial_pos.update(fixed_pos)
