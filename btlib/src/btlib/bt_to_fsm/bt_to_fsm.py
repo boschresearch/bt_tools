@@ -171,7 +171,15 @@ class Bt2FSM:
         port_names = self._add_ports(fsm, node_id)
         p_tick, p_succ, p_fail, p_runn = port_names
         if node['category'] == NODE_CAT.LEAF:
-            unique_name = f'{node_id}_{node["ID"]}'
+            if node.get('ID') is not None:
+                assert node.get('NAME') in [
+                    "Action", "Condition"], \
+                        'Only Action and Condition nodes can have an ID.'
+                unique_name = f'{node_id}_{node["ID"]}'
+            elif node.get('NAME') is not None:
+                unique_name = f'{node_id}_{node["NAME"]}'
+            else:
+                raise ValueError('Leaf node must have an ID or a NAME.')
             fsm.add_node(unique_name, **node)
             fsm.add_edge(p_tick, unique_name, label='on_tick')
             fsm.add_edge(unique_name,
@@ -191,7 +199,7 @@ class Bt2FSM:
                 ct = CONTROL_TYPE.FALLBACK
             else:
                 raise NotImplementedError(
-                    f'Control type {node["name"]} not implemented.')
+                    f'Control type {node["NAME"]} not implemented.')
             self._wire_children_together(
                 fsm, children, port_names, ct)
         elif node['category'] == NODE_CAT.DECORATOR:
@@ -203,7 +211,7 @@ class Bt2FSM:
                 dt = DECORATOR_TYPE.INVERTER
             else:
                 raise NotImplementedError(
-                    f'Decorator {node["name"]} not implemented.')
+                    f'Decorator {node["NAME"]} not implemented.')
             self._wire_child(fsm, fsm_subtree, port_names, dt)
         else:
             raise NotImplementedError(

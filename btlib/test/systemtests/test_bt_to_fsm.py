@@ -38,14 +38,14 @@ class TestBt2FSM(unittest.TestCase):
 
         # check the existence of the edges
         for port in ['success', 'failure', 'running']:
-            self.assertTrue(fsm.has_edge('TEST_CONDITION1000', port))
-        self.assertTrue(fsm.has_edge('tick', 'TEST_CONDITION1000'))
+            self.assertTrue(fsm.has_edge('1000_ServiceBtCondition', port))
+        self.assertTrue(fsm.has_edge('tick', '1000_ServiceBtCondition'))
 
         # check the labels of the edges
-        self.assertEqual(fsm.edges['TEST_CONDITION1000', 'success']['label'], 'on_failure')
-        self.assertEqual(fsm.edges['TEST_CONDITION1000', 'failure']['label'], 'on_success')
-        self.assertEqual(fsm.edges['TEST_CONDITION1000', 'running']['label'], 'on_running')
-        self.assertEqual(fsm.edges['tick', 'TEST_CONDITION1000']['label'], 'on_tick')
+        self.assertEqual(fsm.edges['1000_ServiceBtCondition', 'success']['label'], 'on_failure')
+        self.assertEqual(fsm.edges['1000_ServiceBtCondition', 'failure']['label'], 'on_success')
+        self.assertEqual(fsm.edges['1000_ServiceBtCondition', 'running']['label'], 'on_running')
+        self.assertEqual(fsm.edges['tick', '1000_ServiceBtCondition']['label'], 'on_tick')
 
     def test_simple(self):
         """Test that the conversion from a Behavior Tree to a FSM works."""
