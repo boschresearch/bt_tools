@@ -173,7 +173,7 @@ class Bt2FSM:
         if node['category'] == NODE_CAT.LEAF:
             if node.get('ID') is not None:
                 assert node.get('NAME') in [
-                    "Action", "Condition"], \
+                    'Action', 'Condition'], \
                         'Only Action and Condition nodes can have an ID.'
                 unique_name = f'{node_id}_{node["ID"]}'
             elif node.get('NAME') is not None:
