@@ -9,7 +9,9 @@ setup(
     version='1.0.0',
     packages=[
         package_name,
-        package_name + '.Serialization'],
+        package_name + '.Serialization',
+        package_name + '.bt_to_fsm',
+    ],
     package_dir={
         package_name: os.path.join('src', package_name)
     },

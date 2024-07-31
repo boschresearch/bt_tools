@@ -59,7 +59,7 @@ def _get_node_category(node: BeautifulSoup) -> NODE_CAT:
         return NODE_CAT.SUBTREE
     elif len(node.find_all()) == 0:
         # leaf node
-        return NODE_CAT.ACTION
+        return NODE_CAT.LEAF
     elif len(node.find_all()) == 1:
         # decorator
         return NODE_CAT.DECORATOR
@@ -85,10 +85,10 @@ def xml_to_networkx(fname: str) -> nx.Graph:
     bs = BeautifulSoup(open(fname), 'xml')
     g = nx.DiGraph()
     xpi: XML_PER_ID = {}
-    print(f'{bs=}')
+    # print(f'{bs=}')
 
     bt_roots = bs.find_all('BehaviorTree')
-    print(f'{bt_roots=}')
+    # print(f'{bt_roots=}')
     if len(bt_roots) > 1:
         logger.warning('More than one BehaviorTree found. ')
     for bt_root in bt_roots:

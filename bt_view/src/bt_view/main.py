@@ -109,12 +109,12 @@ def main(args=sys.argv[1:]):
             g = fbl_to_networkx(bt_log_fbl_fname)
             try:
                 if previous_g is not None:
-                    assert str(g.adj) == str(previous_g.adj),\
+                    assert str(g.adj) == str(previous_g.adj), \
                         'Graphs must have the same structure'
                     f' {g.adj} != {previous_g.adj}'
                     for n in g.nodes:
                         assert str(g.nodes()[n]) == str(
-                            previous_g.nodes()[n]),\
+                            previous_g.nodes()[n]), \
                             'Graphs must have the node attributes'
                         f' {g.nodes()[n]} != {previous_g.nodes()[n]}'
             except AssertionError as e:
