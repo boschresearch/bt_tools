@@ -46,18 +46,7 @@ def _get_id_and_state_from_line(line: str) -> Tuple[int, NODE_STATE]:
 
 def read_log_fbl(fname: str,
                  g: nx.Graph) -> Tuple[VALUE_MAP, VALUE_MAP_RETURN_STATES]:
-    """
-    Read log file and return values per node.
-
-    Parameters:
-    fname: Log file name
-    g: Graph representing the behavior tree
-    
-    Returns:
-    values_count: How often a node was executed
-    values_success: How often a node was successful (positive value) vs
-        failed (negative value)
-    """
+    """Read log file and return values per node."""
     with open(fname, 'rb') as file_b:
         buf = bytearray(file_b.read())
         log = read_log(buf)
