@@ -49,16 +49,14 @@ def read_log_fbl(fname: str,
     """
     Read log file and return values per node.
 
-    Args:
-    ----
-        fname: File name
-        g: Graph
+    Parameters:
+    fname: Log file name
+    g: Graph representing the behavior tree
+    
     Returns:
-    -------
-        values_count: How often a node was executed
-        values_success: How often a node was successful (positive value) vs
-            failed (negative value)
-
+    values_count: How often a node was executed
+    values_success: How often a node was successful (positive value) vs
+        failed (negative value)
     """
     with open(fname, 'rb') as file_b:
         buf = bytearray(file_b.read())
