@@ -29,9 +29,16 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
-# -- Options for HTML output
+# -- HTML Theming
 
 html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+    'logo_only': True,
+    'display_version': False,
+    'style_nav_header_background': '#ED6A5A'
+}
+html_static_path = ['_static']
+html_logo = 'logo.png'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
