@@ -16,8 +16,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     
-    'myst_parser',
-    'autodoc2',
+    # 'myst_parser',
+    # 'autodoc2',
     'sphinx_mdinclude',
 ]
 
