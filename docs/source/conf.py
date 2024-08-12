@@ -38,7 +38,7 @@ html_theme_options = {
     'style_nav_header_background': '#ED6A5A'
 }
 html_static_path = ['_static']
-html_logo = '_static/logo.png'
+html_logo = 'logo.png'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
