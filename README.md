@@ -9,7 +9,7 @@
 
 <img src="bt_tools_common/doc/logo.png" alt="bt_tools logo" width="200"/>
 
-bt_tools is a collection of software for working with behavior trees (BTs) in ROS. It contains means for interpreting, visualizing and introspecting BTs.
+__bt_tools__ is a collection of software for working with behavior trees (BTs) in ROS. It contains means for interpreting, visualizing and introspecting BTs.
 
 ![bt_tools](bt_tools_common/doc/overview.drawio.svg)
 
