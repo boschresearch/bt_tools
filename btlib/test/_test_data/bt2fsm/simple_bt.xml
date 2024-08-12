@@ -1,0 +1,11 @@
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <ServiceBtCondition name="TEST_CONDITION" />
+            <Fallback>
+                <ActionBtAction name="TEST_ACTION_A" />
+                <ActionBtAction name="TEST_ACTION_B" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
