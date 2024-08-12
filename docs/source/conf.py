@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'RTD Demo'
-copyright = '2024, ct2034'
-author = 'ct2034'
+project = 'bt_tools'
+copyright = '2024, Robert Bosch GmbH'
+author = 'Christian Henkel'
 
 release = '0.1'
 version = '0.1.0'
@@ -18,14 +18,15 @@ extensions = [
     
     'myst_parser',
     'autodoc2',
+    'sphinx_mdinclude',
 ]
 
-intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
-    'networkx': ('https://networkx.org/documentation/stable/', None),
-}
-intersphinx_disabled_domains = ['std']
+# intersphinx_mapping = {
+#     'python': ('https://docs.python.org/3/', None),
+#     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
+#     'networkx': ('https://networkx.org/documentation/stable/', None),
+# }
+# intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 

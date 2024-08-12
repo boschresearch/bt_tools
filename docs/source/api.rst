@@ -2,7 +2,7 @@ API
 ===
 
 .. autodoc2-summary::
-   rtd_demo_pkg
+   btlib
 
 .. autodoc2-object:: rtd_demo_pkg.pkg.DemoClass
 
