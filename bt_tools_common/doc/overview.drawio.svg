@@ -1,0 +1,148 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="641px" height="207px" viewBox="-0.5 -0.5 641 207" content="&lt;mxfile&gt;&lt;diagram id=&quot;0GdMQfltvoZxZAsCoj72&quot; name=&quot;Page-1&quot;&gt;7VhLb9swDP41AbZDAsdu3PTYV7bDCgxogW2nQrZlW5giebKcx379SD3iR9K0zTrsUgcwrE8kJZH8KCmj6Hq5+aRIVd7JjPJRGGSbUXQzCsP5PIA3AlsLxPPQAoVimYWmLXDPflMHOr2iYRmte4JaSq5Z1QdTKQRNdQ8jSsl1XyyXvD9qRQq6B9ynhO+j31imS7esWdDinykrSj/yNHA9S+KFHVCXJJPrDhTdjqJrJaW2X8vNNeXoO+8Xq7d4onc3MUWFfonCuVVYEd64tWW0oiKrAZTCzVFv/cJpBn5wTal0KQspCL9t0atSLzl0TuGz1kTpS3Q3AAmX6c+HkgnfsWDcC8J4XkxIQS3i+gPT0mr7HRuTmW/+2OlC42bTlbzZ+taG6Y4atHZa8N0qYcPrpI1a0cyJ7XvTObiWjUqdTyKXgEQV1EnNLITe6qi5CHyicklhmiDg+DAOJsF85kKhKCearfqZRlzCFjtdZw78RrYdgUoyoevOaF8RaIeaxi7xHPOi80F+DOTPgqPy8GFnMND205F5XoNT+hodF7SQycvDORrt5egojLnGZAP3xIU2kbIIAcFS0dzIxb8aacS0xsJwiZMIFwXTZZNMUrmERiLrFORrSlRaYls/YiUBD0aJ5ixpjfiRPMwtuCDDKQC2P6/KA2NcmNBUVQodEyR6klbQG3y/+4KliHEobK2l6vWGFlevN+TBxINaEZFLBS4Krh5qU1/hxWXBoApyzDj6q2EQEmrivbi/6w6WHPBJZwKDoqLpRg8rh5I/6bXkUhmRKDYP9MCyeAfPZ/hDjYqkTBSAdloPsgJgHCKv1yXT9B5wHHQNuxJgckVVzk3dKVmWUaxNSjYiMwUAtXIpdGc4+xwrDGARlvMS0s/7xAo90dbthrIja9ndTPwuc6gm9Fh2hFJnRynVCY7P/kSqjKpxan1xaXTVh/G4i3+0AR/w5Z8w83HF6PoQN33HX7BzxeqGcDxzYIRrTG+6oWmjmRRmW8x3pMgVTvUkxlH0PUGb3qSAU1J3LHN+gWTEUJs38LxRwoSHaBTNGBCFJU76VKqnSAM88MB4hKcNJwN772x+ns2z+FQ6n78BnWf/a4d85HhSOcRD1/FGPLR0I8hF1QjNltTsfojh1ocneqpeTAE442GozTZGUnPYsvSrn+CawRVKlRA5jtGDpHrJcDu2qeMkOlHtnXt4PgxP5V70Btybv9+gnr1BDS5Cp1ypzg6nwOtuS/vXofN+6kTxxeSi88z7Bu0cnY1jt6bpq8zade6Z/eu73cXxu118dlS+f7d7/t4GzfZ/Cyve/vkT3f4B&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 80 168.12 Q 80 180 200 180 Q 320 180 320 140" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 80 161.12 L 82.33 168.12 L 77.67 168.12 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 180px; margin-left: 197px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                depends on
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="197" y="183" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    depends on
+                </text>
+            </switch>
+        </g>
+        <rect x="0" y="10" width="160" height="150" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 152px; height: 1px; padding-top: 0px; margin-left: 5px;">
+                        <div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: left; max-height: 160px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <h1>
+                                    <a href="https://github.com/boschresearch/bt_tools#btlib">
+                                        btlib
+                                    </a>
+                                </h1>
+                                <p>
+                                    - interpret bt.cpp XML files
+                                </p>
+                                <p>
+                                    - interpret bt.cpp FBL files
+                                </p>
+                                <p>
+                                    -
+                                    <b>
+                                        tranform BTs to logically equivalent FSMs
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="5" y="12" fill="#333333" font-family="Helvetica" font-size="12px">
+                    btlib...
+                </text>
+            </switch>
+        </g>
+        <rect x="480" y="10" width="160" height="170" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 152px; height: 1px; padding-top: 0px; margin-left: 485px;">
+                        <div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: left; max-height: 180px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <h1 style="border-color: var(--border-color);">
+                                    <a href="https://github.com/boschresearch/bt_tools#bt_view">
+                                        bt_view
+                                    </a>
+                                </h1>
+                                <p>
+                                    - visualize past executions of BTs from FBL files
+                                </p>
+                                <p>
+                                    - evaluation of node execution cound and return state distribution
+                                </p>
+                                <p>
+                                    -
+                                    <b>
+                                        coverage calculation
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="485" y="12" fill="#333333" font-family="Helvetica" font-size="12px">
+                    bt_view...
+                </text>
+            </switch>
+        </g>
+        <rect x="240" y="10" width="160" height="130" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 152px; height: 1px; padding-top: 0px; margin-left: 245px;">
+                        <div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: left; max-height: 140px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <h1>
+                                    <a href="https://github.com/boschresearch/bt_tools#bt_live">
+                                        bt_live
+                                    </a>
+                                </h1>
+                                <p>
+                                    - visualize BTs at runtime in a browser
+                                </p>
+                                <p>
+                                    - currently active nodes and return states are highlighted
+                                </p>
+                                <p>
+                                    <br/>
+                                </p>
+                                <p>
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="245" y="12" fill="#333333" font-family="Helvetica" font-size="12px">
+                    bt_live...
+                </text>
+            </switch>
+        </g>
+        <path d="M 80 168.12 Q 80 200 320 200 Q 560 200 560 180" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 80 161.12 L 82.33 168.12 L 77.67 168.12 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 200px; margin-left: 310px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                depends on
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="310" y="203" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    depends on
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>
