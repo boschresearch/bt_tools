@@ -24,7 +24,9 @@ html_theme_options = {
 }
 html_logo = 'logo.png'
 html_extra_path = ['../../']
-exclude_patterns = ['docs/build']  # this avoids copying the build directory recursively into itself which not only sounds like a bad idea
+# this avoids copying the build directory recursively into itself 
+# which not only sounds like a bad idea:
+exclude_patterns = ['docs/build']
 html_context = {
     "display_github": True,
     "github_user": "boschresearch",
