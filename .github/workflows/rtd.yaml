@@ -13,6 +13,6 @@ jobs:
         steps:
         - name: Trigger RTDs build
           run: |
-            curl 
+            curl \
             -X POST "https://readthedocs.org/api/v3/projects/bt_tools/versions/latest/builds/" \
             -H "Authorization: Token ${{ secrets.RTD_API_TOKEN }}"
