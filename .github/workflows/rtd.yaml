@@ -1,0 +1,18 @@
+# Workflow to trigger ReadTheDocs build on every push to main branch
+
+name: rtd
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Trigger RTDs build
+          run: |
+            curl 
+            -X POST "https://readthedocs.org/api/v3/projects/bt_tools/versions/latest/builds/" \
+            -H "Authorization: Token ${{ secrets.RTD_API_TOKEN }}"
