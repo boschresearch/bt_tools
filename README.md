@@ -2,6 +2,7 @@
 
 [![github test](https://img.shields.io/github/actions/workflow/status/boschresearch/bt_tools/industrial_ci.yml?label=test&style=flat-square)](https://github.com/boschresearch/bt_tools/actions/workflows/industrial_ci.yml)
 [![github lint](https://img.shields.io/github/actions/workflow/status/boschresearch/bt_tools/lint.yaml?label=lint&style=flat-square)](https://github.com/boschresearch/bt_tools/actions/workflows/lint.yaml)
+[![readthedocs](https://img.shields.io/readthedocs/bt-tools?style=flat-square)](https://bt-tools.readthedocs.io/en/latest/)
 [![GitHub issues](https://img.shields.io/github/issues/boschresearch/bt_tools.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/issues)
 [![GitHub prs](https://img.shields.io/github/issues-pr/boschresearch/bt_tools.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/pulls)
 [![python](https://img.shields.io/github/languages/top/boschresearch/bt_tools.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/search?l=python)
