@@ -9,7 +9,6 @@
 
   <exec_depend>python3-django</exec_depend>  <!-- TODO -->
 
-  <exec_depend>bt_tools_common</exec_depend>
   <exec_depend>bt_view</exec_depend>
   <exec_depend>btlib</exec_depend>
 

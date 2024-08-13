@@ -86,7 +86,7 @@ def data(request):
 
 def favicon_png(request):
     with open(os.path.join(
-        get_package_share_directory('bt_tools_common'),
+        # get_package_share_directory(''), TODO
         'doc',
         'logo32p.png'
     ), 'rb') as f:
@@ -95,7 +95,7 @@ def favicon_png(request):
 
 def favicon_svg(request):
     with open(os.path.join(
-        get_package_share_directory('bt_tools_common'),
+        # get_package_share_directory(''), TODO
         'doc',
         'logo.svg'
     ), 'rb') as f:
