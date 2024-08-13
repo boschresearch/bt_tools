@@ -1,3 +1,1 @@
-"""
-Render behavior trees to images files.
-"""
+"""Render behavior trees to images files."""
