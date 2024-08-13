@@ -10,11 +10,6 @@ version = '0.1.0'
 
 # -- General configuration
 extensions = [
-    'sphinx.ext.autosummary',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
-    
-    # 'myst_parser',
     'autodoc2',
     'sphinx_mdinclude',
 ]
@@ -27,8 +22,8 @@ html_theme_options = {
     'display_version': False,
     'style_nav_header_background': '#364C3B'  # Dark contrast to the logo
 }
-html_static_path = ['_static']
 html_logo = 'logo.png'
+html_extra_path = ['../../']
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

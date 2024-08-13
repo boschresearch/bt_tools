@@ -9,5 +9,4 @@ Contents
 .. toctree::
 
    tutorials
-   api
-
+   apidocs/index
