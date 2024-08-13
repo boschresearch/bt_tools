@@ -24,10 +24,15 @@ html_theme_options = {
 }
 html_logo = 'logo.png'
 html_extra_path = ['../../']
+html_context = {
+    "display_github": True,
+    "github_user": "boschresearch",
+    "github_repo": "bt_tools",
+    "github_version": "main",
+    "conf_py_path": "docs/source/",
+}
 
-# -- Options for EPUB output
-epub_show_urls = 'footnote'
-
+# -- autodoc config
 autodoc2_packages = [
     "../../btlib/src/btlib",
     "../../bt_view/src/bt_view",
