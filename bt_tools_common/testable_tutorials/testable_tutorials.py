@@ -51,7 +51,6 @@ class ROSTerminal:
             command += '\n'
         self.process.stdin.write(command)
         self.process.stdin.flush()
-        self.process.stdin.flush()
 
         output = []
         # Read the output
