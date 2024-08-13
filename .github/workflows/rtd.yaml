@@ -8,11 +8,11 @@ on:
       - main
 
 jobs:
-    build:
+    rtd:
         runs-on: ubuntu-latest
         steps:
         - name: Trigger RTDs build
           run: |
             curl \
-            -X POST "https://readthedocs.org/api/v3/projects/bt_tools/versions/latest/builds/" \
+            -X POST "https://readthedocs.org/api/v3/projects/bt-tools/versions/latest/builds/" \
             -H "Authorization: Token ${{ secrets.RTD_API_TOKEN }}"
