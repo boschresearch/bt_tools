@@ -26,7 +26,14 @@ html_logo = 'logo.png'
 html_extra_path = ['../../']
 # this avoids copying the build directory recursively into itself 
 # which not only sounds like a bad idea:
-exclude_patterns = ['docs/build']
+exclude_patterns = [
+    'docs/build',
+    'docs/source/_build',
+    '__pycache__',
+    '.git',
+    '**/.mypy_cache',
+    '**/.pytest_cache',
+]
 html_context = {
     "display_github": True,
     "github_user": "boschresearch",
