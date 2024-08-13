@@ -54,7 +54,8 @@ def read_log_fbl(fname: str,
 
     :return: Tuple of
         `values_count`: How often a node was executed.
-        `values_success`: How often a node was successful (positive value) vs failed (negative value).
+        `values_success`: How often a node was successful (positive value) 
+        vs failed (negative value).
     """
     with open(fname, 'rb') as file_b:
         buf = bytearray(file_b.read())

@@ -2,8 +2,6 @@ import json
 import os
 import random
 
-from ament_index_python.packages import get_package_share_directory
-
 from bt_live.ros_node import SingletonBtLiveNode
 
 from django.http import HttpResponse

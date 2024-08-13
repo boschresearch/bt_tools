@@ -1,3 +1,1 @@
-"""
-Visualize behavior tree in real-time.
-"""
+"""Visualize behavior tree in real-time."""

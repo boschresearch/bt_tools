@@ -1,6 +1,4 @@
-"""
-Module to visualize behavior trees.
-"""
+"""Module to visualize behavior trees."""
 
 from typing import Dict, List, Optional
 
