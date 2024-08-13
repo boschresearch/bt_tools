@@ -53,9 +53,8 @@ def read_log_fbl(fname: str,
     :param g: Graph representing the behavior tree.
 
     :return: Tuple of
-        values_count: How often a node was executed.
-        values_success: How often a node was successful
-            (positive value) vs failed (negative value)
+        `values_count`: How often a node was executed.
+        `values_success`: How often a node was successful (positive value) vs failed (negative value).
     """
     with open(fname, 'rb') as file_b:
         buf = bytearray(file_b.read())
@@ -79,7 +78,11 @@ def merge_values(
     values1: Optional[Union[VALUE_MAP, VALUE_MAP_RETURN_STATES]],
     values2: Optional[Union[VALUE_MAP, VALUE_MAP_RETURN_STATES]]) -> \
         Union[VALUE_MAP, VALUE_MAP_RETURN_STATES]:
-    """Merge values."""
+    """
+    Merge values of two value maps.
+
+    On the lowest level this will add the two values if they are present.
+    """
     if values1 is None:
         assert values2 is not None, 'At least one values must not be None'
         return values2

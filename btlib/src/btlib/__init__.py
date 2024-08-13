@@ -1,3 +1,7 @@
+"""
+Module to visualize behavior trees.
+"""
+
 from typing import Dict, List, Optional
 
 from bs4 import BeautifulSoup

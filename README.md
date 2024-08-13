@@ -7,11 +7,11 @@
 [![python](https://img.shields.io/github/languages/top/boschresearch/bt_tools.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/search?l=python)
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg?style=flat-square)](https://github.com/boschresearch/bt_tools/blob/main/LICENSE)
 
-<img src="bt_tools_common/doc/logo.png" alt="bt_tools logo" width="200"/>
+<img src="imgs/logo.png" alt="bt_tools logo" width="200"/>
 
 __bt_tools__ is a collection of software for working with behavior trees (BTs) in ROS. It contains means for interpreting, visualizing and introspecting BTs.
 
-![bt_tools](bt_tools_common/doc/overview.drawio.svg)
+![bt_tools](imgs/overview.drawio.svg)
 
 ## btlib
 
@@ -38,7 +38,7 @@ ros2 run bt_live bt_live --ros-args -p fbl_file:=<path_to_fbl_log>
 Then open a browser at <http://localhost:8000> to see the visualization.
 It should look a little something like this:
 
-<img src="bt_live/doc/bt_live_browser.png" width="600" />
+<img src="imgs/bt_live_browser.png" width="600" />
 
 ## bt_view
 
@@ -58,7 +58,7 @@ to the same folder that the `fbl` log is in.
 
 For example, the `_states.png` file will look like this:
 
-<img src="bt_view/test/_test_data/reference/bt_trace_other_fbl_log_states.png" width="600" />
+<img src="imgs/bt_trace_other_fbl_log_states.png" width="600" />
 
 ### Calculate coverage
 
