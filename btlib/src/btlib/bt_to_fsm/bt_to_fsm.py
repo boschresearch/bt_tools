@@ -218,7 +218,7 @@ class Bt2FSM:
                 f'Category {node["category"]} not implemented.')
         return fsm
 
-    def _plot_fsm(self, fsm: nx.DiGraph):
+    def plot_fsm(self, fsm: nx.DiGraph):
         """Plot the Finite State Machine."""
         import matplotlib.pyplot as plt
         fixed_pos = {

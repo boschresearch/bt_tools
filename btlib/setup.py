@@ -33,5 +33,8 @@ setup(
     license='Apache-2.0',
     tests_require=[
         'pytest',
-    ]
+    ],
+    scripts=[
+        'scripts/bt_to_fsm',
+    ],
 )

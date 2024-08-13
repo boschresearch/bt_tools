@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+import argparse
+from btlib.bt_to_fsm import bt_to_fsm
+from btlib.bts import xml_to_networkx
+
+def main():
+    parser = argparse.ArgumentParser(description='Converts a BT to an FSM')
+    parser.add_argument('bt', type=str, help='The BT to convert')
+    args = parser.parse_args()
+
+    bt, _ = xml_to_networkx(args.bt)
+    btf = bt_to_fsm.Bt2FSM(bt)
+    fsm = btf.convert()
+    btf.plot_fsm(fsm)
+
+if __name__ == '__main__':
+    main()
