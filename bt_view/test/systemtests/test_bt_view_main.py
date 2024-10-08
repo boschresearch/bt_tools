@@ -82,7 +82,7 @@ class TestBtViewMain(unittest.TestCase):
                 fname = os.path.join(
                     TEST_DATA_DIR, f'bt_trace{no}_fbl_log_{data}.svg')
                 # load svg file
-                with open(fname, 'r') as f:
+                with open(fname, 'r', encoding='utf-8') as f:
                     svg = f.read()
                 svg_hashes_fbl[fname] = hash(svg)
                 self._check_svg_for_nodenames(svg)
@@ -230,14 +230,14 @@ class TestBtViewMain(unittest.TestCase):
                 fname = os.path.join(
                     TEST_DATA_DIR, f'bt_trace{no}_fbl_log_{data}.svg')
                 # load svg file
-                with open(fname, 'r') as f:
+                with open(fname, 'r', encoding='utf-8') as f:
                     svg = f.read()
                 svg_hashes_fbl[fname] = hash(svg)
                 self._check_svg_for_nodenames(svg)
 
         # also hash the combined svg files
         for fname in fnames_combined_svg:
-            with open(fname, 'r') as f:
+            with open(fname, 'r', encoding='utf-8') as f:
                 svg = f.read()
             svg_hashes_fbl[fname] = hash(svg)
             self._check_svg_for_nodenames(svg)
@@ -273,3 +273,32 @@ class TestBtViewMain(unittest.TestCase):
             main(['--bt_log_fbl_fname', fname_2,
                   '--coverage-threshold', '0.8'])
         self.assertEqual(cm.exception.code, 1)
+
+    def test_bt_view_main_xml(self):
+        """Test if the correct images are created for XML input."""
+        base_name: str = 'behavior_tree'
+        xml_fname = os.path.join(
+            TEST_DATA_DIR,
+            f'{base_name}.xml')
+        main(['--bt_xml_fname', xml_fname])
+
+        # make sure the files have been created
+        for ext in self.img_exts:
+            fname = os.path.join(
+                TEST_DATA_DIR, f'{base_name}.{ext}')
+            self.assertTrue(os.path.isfile(fname))
+
+        # make sure they match the reference
+        for ext in self.img_exts:
+            with open(os.path.join(
+                TEST_DATA_DIR,
+                f'{base_name}.{ext}'
+                    ), 'rb') as f:
+                out = f.read()
+            with open(os.path.join(
+                TEST_DATA_DIR,
+                'reference',
+                f'{base_name}.{ext}'
+                    ), 'rb') as f:
+                ref = f.read()
+            self.assertEqual(out, ref)

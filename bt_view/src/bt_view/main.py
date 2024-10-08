@@ -20,10 +20,12 @@ import random
 import sys
 
 try:
+    from bt_view import draw_pygraphviz  # type: ignore
     from bt_view import draw_pygraphviz_w_history  # type: ignore
     from bt_view import draw_pygraphviz_w_returnstates  # type: ignore
     from bt_view import draw_pygraphviz_w_valuemod  # type: ignore
 except ImportError:
+    from .bt_view import draw_pygraphviz
     from .bt_view import draw_pygraphviz_w_history
     from .bt_view import draw_pygraphviz_w_returnstates
     from .bt_view import draw_pygraphviz_w_valuemod
@@ -76,7 +78,7 @@ def main(args=sys.argv[1:]):
         parser.print_help()
         sys.exit(1)
 
-    if arguments.bt_xml_fname and arguments.bt_log_fbl_fname:
+    if arguments.bt_xml_fname and arguments.bt_log_fbl_fnames:
         print('When reading FBL log file, XML file is not needed '
               'and will be ignored')
         arguments.bt_xml_fname = None
@@ -93,6 +95,7 @@ def main(args=sys.argv[1:]):
         g, _ = xml_to_networkx(bt_xml_fname)
         # if arguments.assemble_subtrees:
         #     g, xpi = assemble_subtrees(g, xpi)
+        draw_pygraphviz(g, os.path.splitext(bt_xml_fname)[0])
 
     # read fbl log file
     if arguments.bt_log_fbl_fnames:
