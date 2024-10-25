@@ -15,12 +15,12 @@ You need to have this package installed in your workspace.
 If you don't have it, build it:
 
 ```bash
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
+mkdir -p ~/colcon_ws/src
+cd ~/colcon_ws/src
 git clone https://github.com/boschresearch/bt_tools.git
-cd ~/catkin_ws
-catkin build --symlink-install --packages-select btlib
-source ~/catkin_ws/devel/setup.bash
+cd ~/colcon_ws
+colcon build --symlink-install --packages-select btlib
+source ~/colcon_ws/devel/setup.bash
 ```
 
 ### Input file
@@ -47,7 +47,7 @@ For example [simple_bt.xml](https://github.com/boschresearch/bt_tools/blob/main/
 Then pass it to the script:
 
 ```bash
-bt_to_fsm.py ~/catkin_ws/src/bt_tools/btlib/test/_test_data/bt2fsm/simple_bt.xml
+bt_to_fsm.py ~/colcon_ws/src/bt_tools/btlib/test/_test_data/bt2fsm/simple_bt.xml
 ```
 
 ### Output
