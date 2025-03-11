@@ -34,15 +34,20 @@ def _get_siblings(elm):
     return [ch for ch in elm.parent.children if isinstance(ch, Tag)]
 
 
-def _get_unique_id(elm: BeautifulSoup, tree_id: int) -> int:
+def _get_unique_id(elm: BeautifulSoup, tree_id: int) -> str:
+    """
+    Get a unique id for the node.
+    
+    This is a byte string that is unique for the node in the graph. It is used to identify the node
+    in the graph.
+    """
     if elm.name == 'BehaviorTree':
-        # we need a one in at first position, because 00 evaluates to 0
-        return tree_id + 10
-    parents_ch_list = _get_siblings(elm)
-    n_chars_of_nr = floor(log10(len(parents_ch_list)) + 1)
-    return int(
-        str(_get_unique_id(elm.parent, tree_id)) + str(
-            parents_ch_list.index(elm)).zfill(n_chars_of_nr))
+        return f'{tree_id:02x}'
+    # which number sibling is this node
+    sibling_no: int = _get_siblings(elm).index(elm)
+    this_id: str = _get_unique_id(elm.parent, tree_id)
+    this_id += f'{sibling_no:02x}'
+    return this_id
 
 
 def _get_attrs(elm: BeautifulSoup) -> dict:

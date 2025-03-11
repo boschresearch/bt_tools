@@ -63,7 +63,7 @@ class UnittestBTs(unittest.TestCase):
         # all nodes are in the graph and the xpi
         self.assertEqual(g.number_of_nodes(), 4)
         self.assertEqual(len(xpi), 4)
-        for x in [10, 100, 1000, 1001]:
+        for x in ['00', '0000', '000000', '000001']:
             self.assertIn(x, g.nodes)
             self.assertIn(x, xpi.keys())
 
